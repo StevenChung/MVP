@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 
+const kanyeRefs = [
+  `please, baby... no more zubats in my way`,
+  `father stretch my lucky eggs pt. 1`,
+  `ultralight pokemodules`
+];
+
 class SearchBar extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       value: 'zubat',
-      lat: `37.798307`,
-      lng: `-122.408013`
+      lat: 37.798307,
+      lng: -122.408013
     };
   }
 
@@ -17,7 +23,7 @@ class SearchBar extends Component {
         <input
           type="text"
           className="search-bar-pokemon-name"
-          defaultValue={`please, baby... no more zubats in my way`}
+          defaultValue={ kanyeRefs[Math.floor(Math.random() * kanyeRefs.length)] }
           onChange={(event) => {
             this.setState({
               value: event.target.value
@@ -48,6 +54,10 @@ class SearchBar extends Component {
         />
         <button type="submit" onClick={() => {
             this.props.searchValue(this.state.value, this.state.lat, this.state.lng);
+            this.setState({
+              lat: this.state.lat - (Math.random() * (0.001)),
+              lng: this.state.lng - (Math.random() * (0.001))
+            })
           }}>Submit</button>
       </div>
     );
