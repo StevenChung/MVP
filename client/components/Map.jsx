@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import GoogleMap from 'google-map-react';
 import { kewpie } from '../../__priv.js';
 import { crimeData } from '../util/data.js';
+import { pokeData } from '../util/pokemon.js';
 import Marker from './Marker.jsx';
+import PokemonMarker from './pokemonMarker.jsx';
 
 export class SimpleMapPage extends Component {
 
@@ -19,6 +21,9 @@ export class SimpleMapPage extends Component {
         zoom={15}>
         {crimeData.map((data) => {
           return <Marker lat={data.lat} lng={data.lng} text={data.descript} />
+        })}
+        {pokeData.concat(this.props.workingStable).map((data) => {
+          return <PokemonMarker lat={data.lat} lng={data.lng} url={data.url}/>
         })}
       </GoogleMap>
     );

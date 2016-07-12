@@ -14,12 +14,12 @@ class App extends Component {
     this.state = {
       currentPokemon: null,
       workingStable: [],
-      // for saving state...
-      failure: '',
+      // should use Steven's hardcoded pokedata if not logged in
+      failure: ''
     };
   }
 
-  searchPokemon(val) {
+  searchPokemon(val, lat, lng) {
     val = val.toLowerCase();
     $.ajax({
       url: `http://pokeapi.co/api/v2/pokemon/${val}`,
@@ -28,7 +28,11 @@ class App extends Component {
       success: (res) => {
         console.log(res);
         var newStable = this.state.workingStable.slice();
-        newStable.push(res.id);
+        newStable.push({
+          url: `http://pokeapi.co/media/sprites/pokemon/${res.id}.png`,
+          lat: lat,
+          lng: lng
+        });
         this.setState({
           currentPokemon: res,
           workingStable: newStable,
@@ -51,12 +55,12 @@ class App extends Component {
     return (
       <div>
         <div id="map">
-          <SimpleMapPage />
+          <SimpleMapPage workingStable={this.state.workingStable}/>
         </div>
         <h2 className="pocketMonstersTitle">Crime and Pokémon</h2>
         <div id="search">
-          <SearchBar searchValue={(val) => {
-              this.searchPokemon(val);
+          <SearchBar searchValue={(val, lat, lng) => {
+              this.searchPokemon(val, lat, lng);
             }}/>
         </div>
         <div className="failure">{this.state.failure}</div>
