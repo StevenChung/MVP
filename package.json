@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "runserv": "node server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "wpindex": "webpack --watch",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"

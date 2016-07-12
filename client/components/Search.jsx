@@ -4,7 +4,7 @@ class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'ZUBAT'
+      value: 'zubat'
     };
   }
 
@@ -13,7 +13,7 @@ class SearchBar extends Component {
       <div className="search-bar">
         <input
           type="text"
-          defaultValue={this.state.value}
+          defaultValue={`please, baby... no more zubats in my way`}
           onChange={(event) => {
             this.setState({
               value: event.target.value
