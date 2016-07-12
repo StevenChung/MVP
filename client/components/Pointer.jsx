@@ -10,3 +10,16 @@ export const Map = ({ currentPokemon }) => {
   );
 }
 // can save this for pointer later
+
+// appendPokemon() {
+//   $.ajax({
+//     url: 'http://pokeapi.co/api/v2/pokemon/1',
+//     dataType: 'json',
+//     TYPE: 'GET',
+//     success: (res) => {
+//       this.setState({
+//         currentPokemon: res
+//       });
+//     }
+//   });
+// }

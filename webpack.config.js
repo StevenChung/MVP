@@ -1,5 +1,5 @@
 module.exports = {
-  entry: __dirname + '/client/components/',
+  entry: __dirname + '/client/components',
   output: {
     path: __dirname,
     publicPath: '/',

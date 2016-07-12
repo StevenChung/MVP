@@ -26,6 +26,8 @@
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-google-maps": "^4.11.0",
+    "react-googlemaps": "^0.4.0",
+    "reactify": "^1.1.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
