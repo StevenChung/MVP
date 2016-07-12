@@ -7,6 +7,8 @@ import $ from 'jquery';
 import GoogleMap from 'google-map-react';
 import { SimpleMapPage } from './Map.jsx';
 import { SignIn } from './signin.jsx';
+import { apiGET, apiPOST } from './helperServerAPI.jsx';
+import { SignUp } from './signup.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -28,7 +30,6 @@ class App extends Component {
       dataType: 'json',
       TYPE: 'GET',
       success: (res) => {
-        console.log(res);
         var newStable = this.state.workingStable.slice();
         newStable.push({
           url: `http://pokeapi.co/media/sprites/pokemon/${res.id}.png`,
@@ -38,14 +39,10 @@ class App extends Component {
         this.setState({
           currentPokemon: res,
           workingStable: newStable,
-          failure: ''
         });
-        console.log(this.state.workingStable);
       },
       failure: (err) => {
-        this.setState({
-          failure: 'invalid pocket monster!'
-        });
+        console.log(err);
       }
     });
     // http://api.jquery.com/jquery.ajax/
@@ -62,13 +59,13 @@ class App extends Component {
         <h2 className="pocketMonstersTitle">Crime and Pokémon</h2>
         <div className="credentialsEntry">
           <SignIn />
+          <SignUp />
         </div>
         <div id="search">
           <SearchBar searchValue={(val, lat, lng) => {
               this.searchPokemon(val, lat, lng);
             }}/>
         </div>
-        <div className="failure">{this.state.failure}</div>
         <div className="pokedex">
           <PocketMonster currentPokemon={this.state.currentPokemon}/>
         </div>
@@ -78,4 +75,3 @@ class App extends Component {
 }
 
 ReactDOM.render(<App />, document.querySelector('.container'));
-// ReactDOM.render(<SimpleMapPage />, document.getElementById('map'));

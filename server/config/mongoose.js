@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 module.exports = function() {
-  mongoose.connect('mongodb://localhost/surveys');
+  mongoose.connect('mongodb://localhost/pokemon');
   var db = mongoose.connection;
 
   db.on('error', function (err) {
@@ -10,8 +10,5 @@ module.exports = function() {
 
   db.once('open', function() {
     console.log('Database is connected');
-  }); 
+  });
 };
-
-
-
