@@ -50,6 +50,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div id="map">
+          <SimpleMapPage />
+        </div>
         <h2 className="pocketMonstersTitle">Crime and Pokémon</h2>
         <div id="search">
           <SearchBar searchValue={(val) => {
@@ -66,4 +69,4 @@ class App extends Component {
 }
 
 ReactDOM.render(<App />, document.querySelector('.container'));
-ReactDOM.render(<SimpleMapPage />, document.getElementById('map'));
+// ReactDOM.render(<SimpleMapPage />, document.getElementById('map'));
