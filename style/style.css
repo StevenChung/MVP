@@ -2,5 +2,42 @@
   font-family: "Source Sans Pro";
   font-size: 22px;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
+}
+
+.search-bar {
+  margin: 20px;
+  text-align: center;
+}
+
+.search-bar input {
+  width: 35%;
+}
+
+.pokedex {
+  text-align: center;
+}
+
+.failure {
+  text-align: center;
+  font-family: "Source Sans Pro";
+  font-size: 10px;
+  line-height: 1.2em;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.pokedex-entry {
+  text-align: center;
+  font-family: "Source Sans Pro";
+  font-size: 14px;
+  line-height: 1.2em;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-style: normal;
 }
