@@ -4,6 +4,8 @@ import { kewpie } from '../../__priv.js';
 import SearchBar from './Search.jsx';
 import { PocketMonster } from './PocketMonster.jsx';
 import $ from 'jquery';
+import GoogleMap from 'google-map-react';
+import { SimpleMapPage } from './Map.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -18,6 +20,7 @@ class App extends Component {
   }
 
   searchPokemon(val) {
+    val = val.toLowerCase();
     $.ajax({
       url: `http://pokeapi.co/api/v2/pokemon/${val}`,
       dataType: 'json',
@@ -63,3 +66,4 @@ class App extends Component {
 }
 
 ReactDOM.render(<App />, document.querySelector('.container'));
+ReactDOM.render(<SimpleMapPage />, document.getElementById('map'));

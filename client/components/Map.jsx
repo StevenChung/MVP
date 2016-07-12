@@ -1,14 +1,9 @@
 import React, {Component} from 'react';
 import GoogleMap from 'google-map-react';
+import { kewpie } from '../../__priv.js';
 
 export class SimpleMapPage extends Component {
-  getDefaultProps: function() {
-    return {
-      center: [37.773972, -122.431297],
-      zoom: 15,
-      greatPlaceCoords: { lat:37.773972, lng: -122.431297 }
-    };
-  }
+
   constructor(props) {
     super(props);
     this.state = {};
@@ -17,10 +12,12 @@ export class SimpleMapPage extends Component {
   render() {
     return (
        <GoogleMap
-        apiKey={AIzaSyBsXKnadeCgcPspu6ud2EQ6Ae9-cxBx6cw} // set if you need stats etc ...
-        center={this.props.center}
-        zoom={this.props.zoom}>
+        bootstrapURLKeys={{key: kewpie}}
+        center={[37.798307, -122.408013]}
+        zoom={15}>
       </GoogleMap>
     );
   }
 }
+
+// http://bit.ly/29Luv8O
