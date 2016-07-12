@@ -4,6 +4,8 @@
 var express = require('express');
 var app = express();
 var publicDir = require('path').join(__dirname, '../');
+require('./config/mongoose')();
+require('./config/express').setup(app);
 
 app.use(express.static(publicDir));
 
