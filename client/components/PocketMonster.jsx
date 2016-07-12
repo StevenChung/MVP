@@ -5,9 +5,8 @@ export const PocketMonster = ({ currentPokemon }) => {
   return (!currentPokemon) ? <div className="failure">still waiting, boss...</div> :
   (
     <div className="pokedex-entry">
-      <img src={currentPokemon.sprites.front_shiny} />
+      <img src={currentPokemon.sprites.front_default} />
       <div>{currentPokemon.name}</div>
     </div>
   );
 }
-// can save this for pointer later
