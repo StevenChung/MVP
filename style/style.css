@@ -61,3 +61,20 @@
   letter-spacing: 1px;
   display: none
 }
+
+.sign-in-up-title {
+  text-align: center;
+  font-family: "Source Sans Pro";
+  font-size: 8px;
+}
+
+.sign-in-up-title input {
+  margin: 5px;
+  text-align: center;
+  width: 5%;
+}
+
+.sign-in-up-button {
+  font-family: "Source Sans Pro";
+  font-size: 8px;
+}

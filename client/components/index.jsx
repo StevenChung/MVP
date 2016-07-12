@@ -6,6 +6,7 @@ import { PocketMonster } from './PocketMonster.jsx';
 import $ from 'jquery';
 import GoogleMap from 'google-map-react';
 import { SimpleMapPage } from './Map.jsx';
+import { SignIn } from './signin.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +16,8 @@ class App extends Component {
       currentPokemon: null,
       workingStable: [],
       // should use Steven's hardcoded pokedata if not logged in
-      failure: ''
+      username: null,
+      loggedIn: false
     };
   }
 
@@ -58,6 +60,9 @@ class App extends Component {
           <SimpleMapPage workingStable={this.state.workingStable}/>
         </div>
         <h2 className="pocketMonstersTitle">Crime and Pokémon</h2>
+        <div className="credentialsEntry">
+          <SignIn />
+        </div>
         <div id="search">
           <SearchBar searchValue={(val, lat, lng) => {
               this.searchPokemon(val, lat, lng);

@@ -5,7 +5,8 @@ import { crimeData } from '../util/data.js';
 import { pokeData } from '../util/pokemon.js';
 import Marker from './Marker.jsx';
 import PokemonMarker from './pokemonMarker.jsx';
-
+// export default => export just one
+// export {...} => in object to extract
 export class SimpleMapPage extends Component {
 
   constructor(props) {
