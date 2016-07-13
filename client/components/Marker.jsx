@@ -12,7 +12,7 @@ const stylez = {
   top: -K_HEIGHT / 4,
 
   border: '1px #f44336',
-  opacity: 0.125,
+  opacity: 0.25,
   borderRadius: K_HEIGHT,
   backgroundColor: 'red',
   color: '#3f51b5',

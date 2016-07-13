@@ -26,6 +26,14 @@
 }
 
 
+.crimez {
+  font-family: "Source Sans Pro";
+  text-align: center;
+  font-size: 2px;
+  letter-spacing: 1px;
+  display: none;
+}
+
 .pokedex {
   text-align: center;
 }
@@ -52,14 +60,6 @@
   letter-spacing: 1px;
   font-weight: 300;
   font-style: normal;
-}
-
-.crimez {
-  font-family: "Source Sans Pro";
-  text-align: center;
-  font-size: 2px;
-  letter-spacing: 1px;
-  display: none
 }
 
 .sign-in-up-title {
