@@ -1,5 +1,4 @@
 var express = require('express');
-var passport = require('./express').passport;
 var router = express.Router();
 var UserCtrl = require('../user/userController');
 
