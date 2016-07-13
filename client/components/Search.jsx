@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const kanyeRefs = [
   `please, baby... no more zubats in my way`,
-  `father stretch my lucky eggs pt. 1`,
+  `father stretch my lickitungs pt. 1`,
   `ultralight pokemodules`
 ];
 
@@ -33,7 +33,7 @@ class SearchBar extends Component {
         <input
           type="text"
           className="latlng"
-          defaultValue={`lat`}
+          defaultValue={`37.798307`}
           onChange={(event) => {
             console.log(event.target.value);
             this.setState({
@@ -44,7 +44,7 @@ class SearchBar extends Component {
         <input
           type="text"
           className="latlng"
-          defaultValue={`lng`}
+          defaultValue={`-122.408013`}
           onChange={(event) => {
             console.log(event.target.value);
             this.setState({
