@@ -2,3 +2,5 @@ node_modules
 bundle.js
 npm-debug.log
 __priv.js
+server/config/__priv.js
+server/db/__priv.js

@@ -1,0 +1,17 @@
+DROP DATABASE IF EXISTS pokemon;
+
+CREATE DATABASE pokemon;
+
+USE pokemon;
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+  userID INT,
+  username VARCHAR(20),
+  password VARCHAR(20),
+  salt VARCHAR(10),
+  workingStable VARCHAR(10000),
+  ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY(userID)
+);
